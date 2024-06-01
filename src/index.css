@@ -1,13 +1,189 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+.outfit-regular {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.main-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #86469C;
+  color: #FB9AD1;
+}
+
+.header {
+  width: 100%;
+  background-color: #BC7FCD;
+  color: #FFCDEA;
+  text-transform: uppercase;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.randomizer {
+  padding: 0rem 1rem;
+}
+
+.randomizer-button {
+  cursor: pointer;
+  background-color: #86469c;
+  color: #FFCDEA;
+  padding: 1rem;
+  font-size: 1.5rem;
+  border-radius: 2rem;
+  border: none;
+  margin-right: 1rem;
+}
+.result-panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  background-color: #86469C;
+  color: #FB9AD1;
+}
+
+h3 {
+  font-size: 3rem;
+  color: #FFCDEA;
+  font-weight: 200;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-row: auto;
+  grid-gap: 0.4rem;
+  align-items: center;
+  justify-content: center;
+  background-color: #86469C;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+
+.cell {
+  background-color: #FFCDEAFF;
+  color: #86469C;
+  height: 5rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cell.active {
+  background-color: #fb9ad1;
+  color: #86469C;
+  height: 5rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 1200px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row: auto;
+    grid-gap: 0.4rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #86469C;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: auto;
+    grid-gap: 0.4rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #86469C;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: auto;
+    grid-gap: 0.4rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #86469C;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+.categories {
+  padding: 2rem 0rem 5rem 0rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main-screen {
+  background-color: #86469C
+}
+
+.goal-container {
+  background-color: #FFCDEAFF;
+  color: #86469C;
+  height: 5rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goal-container-expanded {
+  background-color: #FFCDEAFF;
+  color: #86469C;
+  height: 100vh;
+  width: 80%;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
